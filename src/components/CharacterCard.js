@@ -17,14 +17,14 @@ export default class People extends React.Component {
             .get(`https://swapi.co/api/people/${newId}`)
             .then(res => {
                 this.setState({ people: res.data })
-            })
-            // .get(`https://swapi.co/api/planet/${newId}`)
-            // .then(res => {
-            //     this.setState({ people: res.data })
-            // })
-            .catch(err => {
-                console.log(err)
-            })
+            });
+        //     .get(`https://swapi.co/api/planet/${newId}`)
+        //     .then(res => {
+        //         this.setState({ planet: res.data })
+        //     })
+        //     .catch(err => {
+        //         console.log(err)
+        //     })
     }
 
     render() {

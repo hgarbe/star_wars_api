@@ -6,9 +6,6 @@ import PlanetList from './components/PlanetList'
 import PlanetCard from './components/PlanetCard'
 import CharacterCard from './components/CharacterCard'
 
-
-
-
 function App() {
   return (
     <>
