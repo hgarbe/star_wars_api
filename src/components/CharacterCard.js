@@ -1,6 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import { Table, Header } from 'semantic-ui-react'
+import { Link } from 'react-router-dom'
 
 export default class People extends React.Component {
     state = {
@@ -42,7 +43,9 @@ export default class People extends React.Component {
                 <Table.Body>
                     <Table.Row>
                         <Table.Cell>{this.state.people.name}</Table.Cell>
+                        <Link to={`/planets`}>
                         <Table.Cell>{this.state.people.homeworld}</Table.Cell>
+                        </Link>
                         <Table.Cell>{this.state.people.mass}</Table.Cell>
                         <Table.Cell>{this.state.people.height}</Table.Cell>
                         <Table.Cell>{this.state.people.gender}</Table.Cell>
