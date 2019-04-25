@@ -9,10 +9,10 @@ export default class Planet extends React.Component {
 
     componentDidMount() {
         const { id } = this.props.match.params
-        let intId = parseInt(id)
-        let newId = intId + 2
+        let pId = parseInt(id)
+        let Id = pId + 2
         axios
-            .get(`https://swapi.co/api/planets/${newId}`)
+            .get(`https://swapi.co/api/planets/${Id}`)
             .then(res => {
                 this.setState({ planet: res.data })
             })

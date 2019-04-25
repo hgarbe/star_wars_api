@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React from 'react'
 import { Table, Header } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
@@ -14,11 +14,11 @@ import axios from 'axios'
 //     }, [])
 
 class PlanetList extends React.Component {
-    state = {planet: []}
+    state = {planets: []}
   
     componentDidMount() {
-      axios.get(`https://swapi.co/api/planet/`).then(res => {
-        this.setState({planet: res.data.results})
+      axios.get(`https://swapi.co/api/planets/`).then(res => {
+        this.setState({planets: res.data.results})
     })
     }
 
