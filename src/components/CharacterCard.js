@@ -5,7 +5,8 @@ import { Link } from 'react-router-dom'
 
 export default class People extends React.Component {
     state = {
-        people: {}
+        people: {},
+        // planet: {}
     }
 
     componentDidMount() {
@@ -17,6 +18,10 @@ export default class People extends React.Component {
             .then(res => {
                 this.setState({ people: res.data })
             })
+            // .get(`https://swapi.co/api/planet/${newId}`)
+            // .then(res => {
+            //     this.setState({ people: res.data })
+            // })
             .catch(err => {
                 console.log(err)
             })
@@ -25,7 +30,7 @@ export default class People extends React.Component {
     render() {
         return (
             <>
-                <Header style={{fontFamily: 'Star Jedi', fontSize: '4em'}} color='yellow' textAlign='center'>
+                <Header style={{fontFamily: 'Star Jedi', fontSize: '4em'}} color='yellow'>
                     {this.state.people.name}
                 </Header>
                 <Table celled collapsing>
@@ -43,7 +48,7 @@ export default class People extends React.Component {
                 <Table.Body>
                     <Table.Row>
                         <Table.Cell>{this.state.people.name}</Table.Cell>
-                        <Link to={`/planets`}>
+                        <Link to={`/planets/planet{id`}>
                         <Table.Cell>{this.state.people.homeworld}</Table.Cell>
                         </Link>
                         <Table.Cell>{this.state.people.mass}</Table.Cell>

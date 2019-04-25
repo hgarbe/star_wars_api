@@ -5,7 +5,7 @@ import { Header, Table } from 'semantic-ui-react'
 
 const CharacterList = () => {
     const [people, setPeople] = useState([])
-  
+
     useEffect( () => {
       axios.get(`https://swapi.co/api/people/`)
         .then( res => {
