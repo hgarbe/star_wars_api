@@ -5,19 +5,17 @@ import { Header, Table } from 'semantic-ui-react'
 
 const CharacterList = () => {
     const [people, setPeople] = useState([])
-
+  
     useEffect( () => {
-        let peopleURL = 'https://swapi.co/api/people'
-        axios
-            .get(peopleURL)
-            .then(res => {
-                setPeople(res.data.results)
-            })
+      axios.get(`https://swapi.co/api/people/`)
+        .then( res => {
+          setPeople(res.data.results)
+          })
     }, [])
 
     return (
         <>
-            <Header width="30px" style={{fontSize: '4em'}} color='yellow'>
+            <Header width="30px" style={{fontFamily: 'Star Jedi', fontSize: '4em'}} color='yellow'>
                 Characters
             </Header>
             <Table collapsing>

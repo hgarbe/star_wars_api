@@ -24,10 +24,10 @@ export default class Planet extends React.Component {
     render() {
         return (
             <>
-                <Header width="30px" style={{fontSize: '4em'}} color='yellow'>
+                <Header width="30px" style={{fontFamily: 'Star Jedi', fontSize: '4em'}} color='yellow'>
                     {this.state.planet.name}
                 </Header>
-                <Table collapsing>
+                <Table celled collapsing>
                 <Table.Header>
                     <Table.Row>
                         <Table.HeaderCell>Climate</Table.HeaderCell>

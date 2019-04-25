@@ -25,10 +25,10 @@ export default class People extends React.Component {
     render() {
         return (
             <>
-                <Header style={{fontSize: '4em'}} color='yellow' textAlign='center'>
+                <Header style={{fontFamily: 'Star Jedi', fontSize: '4em'}} color='yellow' textAlign='center'>
                     {this.state.people.name}
                 </Header>
-                <Table inverted color='black' celled>
+                <Table celled collapsing>
                 <Table.Header>
                     <Table.Row>
                         <Table.HeaderCell>Name</Table.HeaderCell>

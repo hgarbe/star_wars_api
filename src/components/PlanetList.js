@@ -4,19 +4,18 @@ import { Link } from 'react-router-dom'
 import axios from 'axios'
 
 const PlanetList = () => {
-    const [planets, setPlanets] = useState([])
-
+    const [planets, setPlanet] = useState([])
+  
     useEffect( () => {
-        let planetURL = 'https://swapi.co/api/planets'
-        axios 
-            .get(planetURL)
-            .then(res => 
-                setPlanets(res.data.results))
-    })
+      axios.get(`https://swapi.co/api/planets/`)
+        .then( res => {
+          setPlanet(res.data.results)
+          })
+    }, [])
  
         return (
             <>
-                <Header width="30px" style={{fontSize: '4em'}} color='yellow'>
+                <Header width="30px" style={{fontSize: '4em', fontFamily: 'Star Jedi'}} color='yellow'>
                     Planets
                 </Header>
                 <Table collapsing>
